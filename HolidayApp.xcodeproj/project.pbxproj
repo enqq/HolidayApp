@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		705108DB28AFEA8900C39001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108DA28AFEA8900C39001 /* AppDelegate.swift */; };
-		705108DD28AFEA8900C39001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108DC28AFEA8900C39001 /* SceneDelegate.swift */; };
-		705108DF28AFEA8900C39001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108DE28AFEA8900C39001 /* ViewController.swift */; };
 		705108E228AFEA8900C39001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705108E028AFEA8900C39001 /* Main.storyboard */; };
 		705108E428AFEA8A00C39001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705108E328AFEA8A00C39001 /* Assets.xcassets */; };
 		705108E728AFEA8A00C39001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705108E528AFEA8A00C39001 /* LaunchScreen.storyboard */; };
+		705108F028AFED0100C39001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108EF28AFED0100C39001 /* AppCoordinator.swift */; };
+		705108F228AFF11A00C39001 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108F128AFF11A00C39001 /* BaseCoordinator.swift */; };
+		705108F528AFF16F00C39001 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108F428AFF16F00C39001 /* InitialCoordinator.swift */; };
+		705108F928AFF2B600C39001 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108F828AFF2B600C39001 /* HomeViewController.swift */; };
+		705108FB28AFF31600C39001 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108FA28AFF31600C39001 /* HomeCoordinator.swift */; };
+		E6B0E41B6F95B618D003B791 /* Pods_HolidayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CDDF39763D8B4DC634C636 /* Pods_HolidayApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37998D3E522C05BB5C714685 /* Pods-HolidayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.release.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.release.xcconfig"; sourceTree = "<group>"; };
 		705108D728AFEA8900C39001 /* HolidayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705108DA28AFEA8900C39001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		705108DC28AFEA8900C39001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		705108DE28AFEA8900C39001 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		705108E128AFEA8900C39001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		705108E328AFEA8A00C39001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		705108E628AFEA8A00C39001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		705108E828AFEA8A00C39001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705108EF28AFED0100C39001 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		705108F128AFF11A00C39001 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		705108F428AFF16F00C39001 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
+		705108F828AFF2B600C39001 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		705108FA28AFF31600C39001 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CA1C77DA98C40250B646A6A2 /* Pods-HolidayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.debug.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E5CDDF39763D8B4DC634C636 /* Pods_HolidayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B0E41B6F95B618D003B791 /* Pods_HolidayApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C7CC9FFDF1B0C8DE490C81B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5CDDF39763D8B4DC634C636 /* Pods_HolidayApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		705108CE28AFEA8900C39001 = {
 			isa = PBXGroup;
 			children = (
 				705108D928AFEA8900C39001 /* HolidayApp */,
 				705108D828AFEA8900C39001 /* Products */,
+				9636827B52EBA89D6D5457D6 /* Pods */,
+				6C7CC9FFDF1B0C8DE490C81B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,67 @@
 		705108D928AFEA8900C39001 /* HolidayApp */ = {
 			isa = PBXGroup;
 			children = (
+				705108EE28AFECE400C39001 /* App */,
+				705108F328AFF16300C39001 /* Common */,
+				705108F628AFF29900C39001 /* Modules */,
+				705108FC28AFF57700C39001 /* Resources */,
+				705108E828AFEA8A00C39001 /* Info.plist */,
+				705108F128AFF11A00C39001 /* BaseCoordinator.swift */,
+			);
+			path = HolidayApp;
+			sourceTree = "<group>";
+		};
+		705108EE28AFECE400C39001 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				705108DA28AFEA8900C39001 /* AppDelegate.swift */,
-				705108DC28AFEA8900C39001 /* SceneDelegate.swift */,
-				705108DE28AFEA8900C39001 /* ViewController.swift */,
+				705108EF28AFED0100C39001 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		705108F328AFF16300C39001 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				705108F428AFF16F00C39001 /* InitialCoordinator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		705108F628AFF29900C39001 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				705108F728AFF29E00C39001 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		705108F728AFF29E00C39001 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				705108F828AFF2B600C39001 /* HomeViewController.swift */,
+				705108FA28AFF31600C39001 /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		705108FC28AFF57700C39001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				705108E028AFEA8900C39001 /* Main.storyboard */,
 				705108E328AFEA8A00C39001 /* Assets.xcassets */,
 				705108E528AFEA8A00C39001 /* LaunchScreen.storyboard */,
-				705108E828AFEA8A00C39001 /* Info.plist */,
 			);
-			path = HolidayApp;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9636827B52EBA89D6D5457D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C77DA98C40250B646A6A2 /* Pods-HolidayApp.debug.xcconfig */,
+				37998D3E522C05BB5C714685 /* Pods-HolidayApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 705108EB28AFEA8A00C39001 /* Build configuration list for PBXNativeTarget "HolidayApp" */;
 			buildPhases = (
+				D2EFE35D94EBC7488A2A50F8 /* [CP] Check Pods Manifest.lock */,
 				705108D328AFEA8900C39001 /* Sources */,
 				705108D428AFEA8900C39001 /* Frameworks */,
 				705108D528AFEA8900C39001 /* Resources */,
+				7186E7B3A1A9C12E65857796 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +208,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7186E7B3A1A9C12E65857796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2EFE35D94EBC7488A2A50F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HolidayApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		705108D328AFEA8900C39001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				705108DF28AFEA8900C39001 /* ViewController.swift in Sources */,
+				705108F028AFED0100C39001 /* AppCoordinator.swift in Sources */,
 				705108DB28AFEA8900C39001 /* AppDelegate.swift in Sources */,
-				705108DD28AFEA8900C39001 /* SceneDelegate.swift in Sources */,
+				705108F528AFF16F00C39001 /* InitialCoordinator.swift in Sources */,
+				705108F228AFF11A00C39001 /* BaseCoordinator.swift in Sources */,
+				705108F928AFF2B600C39001 /* HomeViewController.swift in Sources */,
+				705108FB28AFF31600C39001 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +402,7 @@
 		};
 		705108EC28AFEA8A00C39001 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1C77DA98C40250B646A6A2 /* Pods-HolidayApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +431,7 @@
 		};
 		705108ED28AFEA8A00C39001 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37998D3E522C05BB5C714685 /* Pods-HolidayApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
