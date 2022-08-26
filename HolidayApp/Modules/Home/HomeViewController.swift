@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     /// Properties
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var showHolidayButton: UIButton!
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var backgroundView: UIView!
     
@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     private func setupView() {
         backgroundView.setRadius(10)
+        showHolidayButton.isEnabled = false
     }
 }
 
@@ -46,8 +47,8 @@ extension HomeViewController {
             .bind(to: viewModel.input.clearButton)
             .disposed(by: disposeBag)
         
-        searchButton.rx.tap
-            .bind(to: viewModel.input.searchButton)
+        showHolidayButton.rx.tap
+            .bind(to: viewModel.input.showHolidayButton)
             .disposed(by: disposeBag)
         
         selectButton.rx.tap
@@ -57,11 +58,20 @@ extension HomeViewController {
     
     private func bindData() {
         viewModel.output.selectedCountry
-            .do(onNext: { [weak self] country in
-                self?.countryLabel.isHidden = country.name.isEmpty
-            })
             .map({ return "\($0.code) - \($0.name)"})
             .drive( countryLabel.rx.text )
+            .disposed(by: disposeBag)
+        
+        /// Hidden CountryLabel when don't select any country
+        viewModel.output.selectedCountry
+            .map({ return $0.name.isEmpty })
+            .drive( countryLabel.rx.isHidden )
+            .disposed(by: disposeBag)
+        
+        /// Enable Show Holiday Button  when don't select any country
+        viewModel.output.selectedCountry
+            .map({ return !$0.name.isEmpty })
+            .drive( showHolidayButton.rx.isEnabled )
             .disposed(by: disposeBag)
     }
 }

@@ -31,7 +31,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOo-2O-nB6">
                                                 <rect key="frame" x="0.0" y="20.5" width="240" height="188.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Search Country"/>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-c3-Yp3">
                                                 <rect key="frame" x="0.0" y="209" width="240" height="0.0"/>
@@ -42,22 +42,22 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Hx-i72">
                                                 <rect key="frame" x="0.0" y="209" width="240" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHq-N3-Jd4">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHq-N3-Jd4" userLabel="Show Holday Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="31"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Show Holiday"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfj-Ao-qZE">
                                                         <rect key="frame" x="120" y="0.0" width="120" height="31"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Clear"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="1iS-YD-Hrv"/>
                                     <constraint firstAttribute="bottom" secondItem="255-7n-JOT" secondAttribute="bottom" constant="20" id="VcY-3P-Glr"/>
@@ -79,8 +79,8 @@
                         <outlet property="backgroundView" destination="tep-qu-Spo" id="ooT-Km-PIm"/>
                         <outlet property="clearButton" destination="Qfj-Ao-qZE" id="r5o-IX-reG"/>
                         <outlet property="countryLabel" destination="B1v-c3-Yp3" id="PRy-HO-hA8"/>
-                        <outlet property="searchButton" destination="DHq-N3-Jd4" id="bLd-iq-d1R"/>
                         <outlet property="selectButton" destination="EOo-2O-nB6" id="ekc-Vh-OFd"/>
+                        <outlet property="showHolidayButton" destination="DHq-N3-Jd4" id="5zN-g0-Qpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -144,8 +144,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

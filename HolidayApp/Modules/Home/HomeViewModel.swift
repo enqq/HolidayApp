@@ -18,8 +18,8 @@ final class HomeViewModel: ViewModelType {
     struct Input {
         /// Tap select button
         let selectButton: AnyObserver<Void>
-        /// Tap search button
-        let searchButton: AnyObserver<Void>
+        /// Tap show holiday button
+        let showHolidayButton: AnyObserver<Void>
         /// Tap clear button
         let clearButton: AnyObserver<Void>
         /// Selected Country
@@ -34,7 +34,7 @@ final class HomeViewModel: ViewModelType {
     }
     
    private let selectButtonPublish = PublishSubject<Void>()
-   private let searchButtonPublish = PublishSubject<Void>()
+   private let showHolidayButtonPublish = PublishSubject<Void>()
    private let clearButtonPublish = PublishSubject<Void>()
    private let selectedCountryPublish = PublishSubject<Country>()
     
@@ -45,7 +45,7 @@ final class HomeViewModel: ViewModelType {
         
 
         
-        self.input = Input(selectButton: selectButtonPublish.asObserver(), searchButton: searchButtonPublish.asObserver(), clearButton: clearButtonPublish.asObserver(), selectedCountry: selectedCountryPublish.asObserver())
+        self.input = Input(selectButton: selectButtonPublish.asObserver(), showHolidayButton: showHolidayButtonPublish.asObserver(), clearButton: clearButtonPublish.asObserver(), selectedCountry: selectedCountryPublish.asObserver())
         
         self.output = Output(selectButton: selectButtonPublish.asObservable(), selectedCountry: countryDriver)
   
