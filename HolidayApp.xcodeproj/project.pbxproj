@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7028231628B4DCA0000B6F18 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028231528B4DCA0000B6F18 /* UIView+CornerRadius.swift */; };
+		7028231828B4DEA7000B6F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028231728B4DEA7000B6F18 /* HomeViewModel.swift */; };
+		7028231A28B4E164000B6F18 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028231928B4E164000B6F18 /* ViewModelType.swift */; };
+		7028231D28B4E489000B6F18 /* SearchCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028231C28B4E489000B6F18 /* SearchCountryViewController.swift */; };
+		7028232128B4E8FC000B6F18 /* SearchCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028232028B4E8FC000B6F18 /* SearchCountryViewModel.swift */; };
+		7028232328B4E90A000B6F18 /* SearchCountryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028232228B4E90A000B6F18 /* SearchCountryCoordinator.swift */; };
+		7028232728B4F5FA000B6F18 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028232528B4F5FA000B6F18 /* CountryTableViewCell.swift */; };
+		7028232828B4F5FA000B6F18 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7028232628B4F5FA000B6F18 /* CountryTableViewCell.xib */; };
+		7028232A28B4F983000B6F18 /* HolidayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028232928B4F983000B6F18 /* HolidayRepository.swift */; };
 		705108DB28AFEA8900C39001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705108DA28AFEA8900C39001 /* AppDelegate.swift */; };
 		705108E228AFEA8900C39001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705108E028AFEA8900C39001 /* Main.storyboard */; };
 		705108E428AFEA8A00C39001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705108E328AFEA8A00C39001 /* Assets.xcassets */; };
@@ -37,6 +45,14 @@
 /* Begin PBXFileReference section */
 		37998D3E522C05BB5C714685 /* Pods-HolidayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.release.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.release.xcconfig"; sourceTree = "<group>"; };
 		7028231528B4DCA0000B6F18 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		7028231728B4DEA7000B6F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7028231928B4E164000B6F18 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		7028231C28B4E489000B6F18 /* SearchCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewController.swift; sourceTree = "<group>"; };
+		7028232028B4E8FC000B6F18 /* SearchCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewModel.swift; sourceTree = "<group>"; };
+		7028232228B4E90A000B6F18 /* SearchCountryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryCoordinator.swift; sourceTree = "<group>"; };
+		7028232528B4F5FA000B6F18 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		7028232628B4F5FA000B6F18 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		7028232928B4F983000B6F18 /* HolidayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayRepository.swift; sourceTree = "<group>"; };
 		705108D728AFEA8900C39001 /* HolidayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705108DA28AFEA8900C39001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705108E128AFEA8900C39001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +108,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7028231B28B4E472000B6F18 /* Search Country */ = {
+			isa = PBXGroup;
+			children = (
+				7028232428B4F5E3000B6F18 /* Cell */,
+				7028231C28B4E489000B6F18 /* SearchCountryViewController.swift */,
+				7028232028B4E8FC000B6F18 /* SearchCountryViewModel.swift */,
+				7028232228B4E90A000B6F18 /* SearchCountryCoordinator.swift */,
+			);
+			path = "Search Country";
+			sourceTree = "<group>";
+		};
+		7028232428B4F5E3000B6F18 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7028232528B4F5FA000B6F18 /* CountryTableViewCell.swift */,
+				7028232628B4F5FA000B6F18 /* CountryTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		705108CE28AFEA8900C39001 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				705108F428AFF16F00C39001 /* InitialCoordinator.swift */,
+				7028231928B4E164000B6F18 /* ViewModelType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -148,6 +185,7 @@
 		705108F628AFF29900C39001 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7028231B28B4E472000B6F18 /* Search Country */,
 				705108F728AFF29E00C39001 /* Home */,
 			);
 			path = Modules;
@@ -158,6 +196,7 @@
 			children = (
 				705108F828AFF2B600C39001 /* HomeViewController.swift */,
 				705108FA28AFF31600C39001 /* HomeCoordinator.swift */,
+				7028231728B4DEA7000B6F18 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +216,7 @@
 			children = (
 				705D108B28B0F32C009484D8 /* Networking.swift */,
 				705D108D28B0F76E009484D8 /* Network.swift */,
+				7028232928B4F983000B6F18 /* HolidayRepository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -289,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7028232828B4F5FA000B6F18 /* CountryTableViewCell.xib in Resources */,
 				705108E728AFEA8A00C39001 /* LaunchScreen.storyboard in Resources */,
 				705108E428AFEA8A00C39001 /* Assets.xcassets in Resources */,
 				705108E228AFEA8900C39001 /* Main.storyboard in Resources */,
@@ -352,14 +393,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				705108F028AFED0100C39001 /* AppCoordinator.swift in Sources */,
+				7028231828B4DEA7000B6F18 /* HomeViewModel.swift in Sources */,
 				705108DB28AFEA8900C39001 /* AppDelegate.swift in Sources */,
 				705D108E28B0F76E009484D8 /* Network.swift in Sources */,
 				705108F528AFF16F00C39001 /* InitialCoordinator.swift in Sources */,
 				705D10A328B10CEA009484D8 /* Countries.swift in Sources */,
 				705108F228AFF11A00C39001 /* BaseCoordinator.swift in Sources */,
 				705108F928AFF2B600C39001 /* HomeViewController.swift in Sources */,
+				7028231A28B4E164000B6F18 /* ViewModelType.swift in Sources */,
 				705108FB28AFF31600C39001 /* HomeCoordinator.swift in Sources */,
+				7028232328B4E90A000B6F18 /* SearchCountryCoordinator.swift in Sources */,
+				7028231D28B4E489000B6F18 /* SearchCountryViewController.swift in Sources */,
+				7028232A28B4F983000B6F18 /* HolidayRepository.swift in Sources */,
+				7028232728B4F5FA000B6F18 /* CountryTableViewCell.swift in Sources */,
 				705D108C28B0F32C009484D8 /* Networking.swift in Sources */,
+				7028232128B4E8FC000B6F18 /* SearchCountryViewModel.swift in Sources */,
 				7028231628B4DCA0000B6F18 /* UIView+CornerRadius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

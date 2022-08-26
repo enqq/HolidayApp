@@ -33,6 +33,12 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-c3-Yp3">
+                                                <rect key="frame" x="0.0" y="209" width="240" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Hx-i72">
                                                 <rect key="frame" x="0.0" y="209" width="240" height="31"/>
                                                 <subviews>
@@ -69,10 +75,69 @@
                             <constraint firstItem="tep-qu-Spo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="yvb-HF-Yfm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="tep-qu-Spo" id="ooT-Km-PIm"/>
+                        <outlet property="clearButton" destination="Qfj-Ao-qZE" id="r5o-IX-reG"/>
+                        <outlet property="countryLabel" destination="B1v-c3-Yp3" id="PRy-HO-hA8"/>
+                        <outlet property="searchButton" destination="DHq-N3-Jd4" id="bLd-iq-d1R"/>
+                        <outlet property="selectButton" destination="EOo-2O-nB6" id="ekc-Vh-OFd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="79.6875"/>
+        </scene>
+        <!--Search Country View Controller-->
+        <scene sceneID="uiu-RF-eOC">
+            <objects>
+                <viewController storyboardIdentifier="SearchCountryViewController" id="gZA-UY-5Y3" customClass="SearchCountryViewController" customModule="HolidayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8B-cy-Bkr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrb-YK-vxK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" id="WER-vo-aK8">
+                                        <rect key="frame" x="8" y="-4" width="398" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9aE-oG-dID"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0rZ-au-K7o">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UMK-0e-qKJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0rZ-au-K7o" firstAttribute="top" secondItem="mrb-YK-vxK" secondAttribute="bottom" id="093-u5-dVb"/>
+                            <constraint firstItem="0rZ-au-K7o" firstAttribute="leading" secondItem="UMK-0e-qKJ" secondAttribute="leading" id="1Nm-nV-vfh"/>
+                            <constraint firstAttribute="trailing" secondItem="0rZ-au-K7o" secondAttribute="trailing" id="3th-wl-OYT"/>
+                            <constraint firstItem="mrb-YK-vxK" firstAttribute="trailing" secondItem="UMK-0e-qKJ" secondAttribute="trailing" id="5Rs-9h-Acp"/>
+                            <constraint firstItem="mrb-YK-vxK" firstAttribute="leading" secondItem="UMK-0e-qKJ" secondAttribute="leading" id="5TP-un-sdM"/>
+                            <constraint firstItem="mrb-YK-vxK" firstAttribute="top" secondItem="UMK-0e-qKJ" secondAttribute="top" id="YMh-0F-mep"/>
+                            <constraint firstAttribute="bottom" secondItem="0rZ-au-K7o" secondAttribute="bottom" id="khD-H3-0q6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="WER-vo-aK8" id="jiP-ZX-zIV"/>
+                        <outlet property="tableView" destination="0rZ-au-K7o" id="yON-3e-sW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAi-3F-b1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="79.6875"/>
         </scene>
     </scenes>
     <resources>

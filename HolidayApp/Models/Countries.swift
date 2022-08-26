@@ -30,6 +30,13 @@ struct Country {
     let code: String
 }
 
+extension Country {
+    init() {
+        name = ""
+        code = ""
+    }
+}
+
 extension Country: Decodable {
    private  enum CountryCodingKeys: String, CodingKey {
         case name
