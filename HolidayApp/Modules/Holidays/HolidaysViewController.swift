@@ -68,7 +68,12 @@ extension HolidaysViewController {
         
         ///Taped row in table
         tableView.rx.modelSelected(Holiday.self)
+            .do(onNext: { [weak self] _ in
+                /// Deselect cell
+                self?.tableView.selectRow(at: nil, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+            })
             .bind(to: viewModel.input.selectedHoliday)
             .disposed(by: disposeBag)
+        
     }
 }

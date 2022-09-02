@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-class HolidaysCoordinator: BaseCoordinator<Void> ,InitialCoordinator {
+class HolidaysCoordinator: BaseCoordinator<Void>, InitialCoordinator {
     private let rootViewController: UIViewController
     var viewModel: HolidaysViewModel!
     
@@ -22,13 +22,23 @@ class HolidaysCoordinator: BaseCoordinator<Void> ,InitialCoordinator {
         
         viewController.viewModel = viewModel
         
+        viewModel.output.selectedHoliday
+            .subscribe(onNext: { [weak self] holiday in
+               _ = self?.detailsHolidayView(holiday)
+            })
+            .disposed(by: disposeBag)
+        
         rootViewController.navigationController?.show(viewController, sender: nil)
-        return Observable.empty()
+        return Observable.never()
     }
 }
 // MARK: Navigation
 extension HolidaysCoordinator {
-    private func detailsHolidayView() {
-        
+    private func detailsHolidayView(_ holiday: Holiday) -> Observable<Void> {
+        let viewModel = DetailsHolidayViewModel(holiday: holiday)
+        let coordinator = DetailsHolidayCoordinator.init(rootViewController: rootViewController)
+        coordinator.viewModel = viewModel
+      
+        return coordinate(to: coordinator)
     }
 }

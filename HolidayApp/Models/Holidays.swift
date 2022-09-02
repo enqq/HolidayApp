@@ -30,7 +30,17 @@ struct Holiday {
     let weekday: Day
     let weekdayObserved: Day
 }
-
+///  Empty model from initializer
+extension Holiday {
+    init() {
+        name = ""
+        date = ""
+        observed = ""
+        country = ""
+        weekday = .init()
+        weekdayObserved = .init()
+    }
+}
 extension Holiday: Decodable {
     private enum HolidayCodingkeys: CodingKey {
         case name, date, observed, country, weekday
@@ -56,5 +66,13 @@ extension Holiday: Decodable {
 struct Day: Decodable {
     let name: String
     let numeric: String
+}
+
+///  Empty model from initializer
+extension Day {
+    init() {
+        name = ""
+        numeric = ""
+    }
 }
 

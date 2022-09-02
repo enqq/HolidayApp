@@ -169,10 +169,99 @@
             </objects>
             <point key="canvasLocation" x="1897" y="80"/>
         </scene>
+        <!--Details Holiday View Controller-->
+        <scene sceneID="XDT-uq-NYT">
+            <objects>
+                <viewController storyboardIdentifier="DetailsHolidayViewController" id="L3a-6f-8vc" customClass="DetailsHolidayViewController" customModule="HolidayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="whJ-xy-n9J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Buk-RK-emg">
+                                <rect key="frame" x="20" y="54" width="374" height="251"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ1-te-Y4o">
+                                        <rect key="frame" x="164.5" y="0.0" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-3f-VgP">
+                                        <rect key="frame" x="169" y="20.5" width="36" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITv-Ak-hxh">
+                                        <rect key="frame" x="156.5" y="41" width="61" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weekday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaO-KL-eFW">
+                                        <rect key="frame" x="153.5" y="61.5" width="67" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcV-pE-5WG">
+                                        <rect key="frame" x="150" y="82" width="74.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="observedWeekday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-tl-ZzY">
+                                        <rect key="frame" x="116.5" y="102.5" width="141" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ljd-zF-75v">
+                                        <rect key="frame" x="10" y="123" width="354" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="RDK-rp-2gt"/>
+                                        </constraints>
+                                        <string key="text">* Date that the holiday is observed on. Example, some countries move holidays that land on a weekend to the following Monday. Often times, this value may be the same as date.</string>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ljd-zF-75v" secondAttribute="trailing" constant="10" id="XNz-dh-1XM"/>
+                                    <constraint firstItem="ljd-zF-75v" firstAttribute="leading" secondItem="Buk-RK-emg" secondAttribute="leading" constant="10" id="haZ-jR-aPf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8RS-yJ-nYh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Buk-RK-emg" firstAttribute="top" secondItem="8RS-yJ-nYh" secondAttribute="top" constant="10" id="8VH-go-6A1"/>
+                            <constraint firstItem="8RS-yJ-nYh" firstAttribute="trailing" secondItem="Buk-RK-emg" secondAttribute="trailing" constant="20" id="inm-sX-Oad"/>
+                            <constraint firstItem="Buk-RK-emg" firstAttribute="leading" secondItem="8RS-yJ-nYh" secondAttribute="leading" constant="20" id="s9v-qf-Y2F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryLabel" destination="IkU-3f-VgP" id="HhN-aS-TAv"/>
+                        <outlet property="dateLabel" destination="ITv-Ak-hxh" id="NMB-IC-Uee"/>
+                        <outlet property="nameLabel" destination="jJ1-te-Y4o" id="fAf-1M-gJn"/>
+                        <outlet property="observedLabel" destination="XcV-pE-5WG" id="5gG-OE-UY3"/>
+                        <outlet property="observedWeekdayLabel" destination="GbA-tl-ZzY" id="vrq-De-kGr"/>
+                        <outlet property="weekdayLabel" destination="gaO-KL-eFW" id="Feh-t4-oWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2KH-Hx-wdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="79"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
