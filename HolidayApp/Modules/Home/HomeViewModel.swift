@@ -31,6 +31,8 @@ final class HomeViewModel: ViewModelType {
         let selectButton: Observable<Void>
         /// Selected Country
         let selectedCountry: Driver<Country>
+        /// Taped showHoliday button
+        let showHolidays: Observable<Void>
     }
     
    private let selectButtonPublish = PublishSubject<Void>()
@@ -43,12 +45,11 @@ final class HomeViewModel: ViewModelType {
         let countryDriver = selectedCountryPublish
             .asDriver(onErrorJustReturn: Country())
         
-
-        
         self.input = Input(selectButton: selectButtonPublish.asObserver(), showHolidayButton: showHolidayButtonPublish.asObserver(), clearButton: clearButtonPublish.asObserver(), selectedCountry: selectedCountryPublish.asObserver())
         
-        self.output = Output(selectButton: selectButtonPublish.asObservable(), selectedCountry: countryDriver)
+        self.output = Output(selectButton: selectButtonPublish.asObservable(), selectedCountry: countryDriver, showHolidays: showHolidayButtonPublish.asObservable())
   
+        /// Remove current selected country when taped clear button
         clearButtonPublish.subscribe(onNext: { [weak self] in
             self?.selectedCountryPublish.onNext(.init())
         })

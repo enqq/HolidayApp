@@ -34,7 +34,7 @@ class NetworkingTest: XCTestCase {
 
     }
     
-    func testFetchCountriesListSucces() throws{
+    func testFetchCountriesListSucces() throws {
         let url = URL.init(string: "https://holidayapi.com/v1/countries?pretty&key=dbedae72-0432-4dfa-8c06-ca74fb6e34b1")
         
         let expaction = expectation(description: "Parse succes")
@@ -49,6 +49,22 @@ class NetworkingTest: XCTestCase {
         }
         self.wait(for: [expaction], timeout: 4)
 }
+    func testFetchHolidaysListSucces() throws {
+        let url = URL.init(string: "https://holidayapi.com/v1/holidays?key=dbedae72-0432-4dfa-8c06-ca74fb6e34b1&country=AF&year=2021")
+        
+        let expaction = expectation(description: "Parse succes")
+        
+        network.fetchParseResponse(url: url!) { (result: NetworkResult<Holidays>) in
+            switch result {
+            case .success(let data):
+                print(data.holidays[0])
+                expaction.fulfill()
+            default:
+                XCTFail("Error parse data")
+            }
+        }
+        self.wait(for: [expaction], timeout: 10)
+    }
 //    func testLaunchPerformance() throws {
 //        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
 //            // This measures how long it takes to launch your application.

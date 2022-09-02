@@ -24,7 +24,7 @@ struct Network: Networking {
         task.resume()
     }
     
-    func fetchParseResponse<T: Decodable>(url: URL, completionHandler: @escaping (NetworkResult<T>) -> ()){
+    func fetchParseResponse<T: Decodable>(url: URL, completionHandler: @escaping (NetworkResult<T>) -> ()) {
         fetchData(url: url) { networkResult in
             switch networkResult {
             case .success(let data):

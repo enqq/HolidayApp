@@ -139,6 +139,36 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="79.6875"/>
         </scene>
+        <!--Holidays View Controller-->
+        <scene sceneID="ezs-bq-Tem">
+            <objects>
+                <viewController storyboardIdentifier="HolidaysViewController" id="zTo-Bv-Beb" customClass="HolidaysViewController" customModule="HolidayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fc6-nJ-NRs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t86-72-AlA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KOG-Eu-g1I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KOG-Eu-g1I" firstAttribute="trailing" secondItem="t86-72-AlA" secondAttribute="trailing" id="LD2-wB-XEP"/>
+                            <constraint firstItem="KOG-Eu-g1I" firstAttribute="bottom" secondItem="t86-72-AlA" secondAttribute="bottom" id="XsL-O8-c50"/>
+                            <constraint firstItem="t86-72-AlA" firstAttribute="leading" secondItem="KOG-Eu-g1I" secondAttribute="leading" id="xzd-iY-aSR"/>
+                            <constraint firstItem="t86-72-AlA" firstAttribute="top" secondItem="KOG-Eu-g1I" secondAttribute="top" id="yDj-Ei-C15"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="t86-72-AlA" id="GZb-EM-AdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgj-h9-4jt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="80"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
