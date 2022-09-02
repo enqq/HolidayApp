@@ -16,7 +16,7 @@ struct HolidayRepository {
     }
     
     private let baseUrl = URL.init(string: "https://holidayapi.com/v1")
-    private let apiKey = "dbedae72-0432-4dfa-8c06-ca74fb6e34b1"
+    private let apiKey = ""
     
     private enum Endpoint: String {
         case listCountries =  "countries"
