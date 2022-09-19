@@ -1,6 +1,6 @@
 # HolidayApp
 A simple application with which you can see a list vacation in one selected country
-- [Same project in SwiftUI](https://github.com/enqq/HolidayApp_SwiftUI)
+- [Same project writed in SwiftUI, Combine, Redux Architecture](https://github.com/enqq/HolidayApp_SwiftUI)
 
 ## Building
  - Install pods
